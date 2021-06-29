@@ -17,6 +17,10 @@ export default class Game {
   }
 
   makeMove(i){
+     //check if winning combo has happen
+     if(this,this.endOfGame()){
+        return;
+     }
      //check to see if something already there
      if(this.board[i]){
         return;
@@ -24,6 +28,9 @@ export default class Game {
     this.board[i] = this.turn; // X or O 
     let winningCombination = this.findWinningCombinations();
     console.log("This is the winner!", winningCombination);
+    if(!winningCombination){
+       this.nextTurn();
+    }
   }
 
   findWinningCombinations(){
@@ -51,6 +58,15 @@ export default class Game {
         console.log(c);//3
      }
      return null;
+  }
+
+  endOfGame(){
+     let winningCombination = this.findWinningCombinations();
+     if(winningCombination){
+        return true;
+     } else {
+        return false;
+     }
   }
 
 }
