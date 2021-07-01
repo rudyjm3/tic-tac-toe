@@ -12,7 +12,7 @@ export default class GameView {
       for(let i = 0; i < game.board.length; i++){
          //console.log(game.board[i]);
          const tile = document.querySelector(`.board-tile[data-index='${i}']`);
-         console.log(tile);
+         //console.log(tile);
          tile.textContent = game.board[i];
       }
    }

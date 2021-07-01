@@ -5,6 +5,11 @@ import GameView from "./GameView.js"
 let game = new Game();
 let gameView = new GameView();
 
+//Start new game
+document.querySelector(".restart").addEventListener("click", () => {
+   //console.log("button clicked");
+   onRestartClick();
+})
 
 let tiles = document.querySelectorAll(".board-tile");
 //console.log(tiles);
@@ -26,6 +31,17 @@ function onTileClick(i){
    //change turn
 
 }
+
+//New/Restart game function
+function onRestartClick() {
+   game = new Game();
+   gameView.updateBoard(game);
+}
+
+
+
+
+
 
 /*gameView.updateBoard(game);
 
