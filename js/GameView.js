@@ -13,15 +13,20 @@ export default class GameView {
       //console.log(game.board);
       //called to update player turn as well
       this.updateTurn(game);
+      const winningCombination = game.findWinningCombinations();
       for(let i = 0; i < game.board.length; i++){
          //console.log(game.board[i]);
          const tile = document.querySelector(`.board-tile[data-index='${i}']`);
          //console.log(tile);
-
+         tile.classList.remove("tile-winner");
          //update icon color(X and O) on the board. 
          let tileType = game.board[i] == 'X' ? "tile-x" : "tile-o";
          //console.log(tileType, 'what is the tileType');
          tile.innerHTML = `<span class="${tileType}">${game.board[i] ? game.board[i] : ""}</span>`
+
+         if(winningCombination && winningCombination.includes(i)){
+            tile.classList.add("tile-winner");
+         }
       }
    }
 
