@@ -11,6 +11,7 @@ document.querySelector(".restart").addEventListener("click", () => {
    onRestartClick();
 })
 
+//To tell which tile was clicked to add X or O to the gameboard tile
 let tiles = document.querySelectorAll(".board-tile");
 //console.log(tiles);
 tiles.forEach((tile) => {
