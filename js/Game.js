@@ -21,7 +21,7 @@ export default class Game {
      if(this,this.endOfGame()){
         return;
      }
-     //check to see if something already there
+     //check to see if something is already there
      if(this.board[i]){
         return;
      }

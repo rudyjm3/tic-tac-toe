@@ -39,7 +39,7 @@ function onRestartClick() {
    gameView.updateBoard(game);
 }
 
-
+gameView.updateBoard(game);
 
 
 
