@@ -15,9 +15,10 @@ body {
   max-width: 1440px;
   height: 800px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  padding: 40px;
 }  
 h1{
   font-size: 70px;
@@ -107,4 +108,15 @@ h1{
 }
 .tile-winner span{
    color: #23ce6b
+}
+
+/***  MEDIA QUERY - TABLET 1200PX  **/
+@media only screen and (max-width: 1200px) {
+   .wrapper{
+      flex-direction: column;
+      height: auto;
+   }
+   .left-section{
+      margin: 50px 0;
+   }
 }
